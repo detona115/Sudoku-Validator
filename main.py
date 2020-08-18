@@ -1,7 +1,6 @@
-# This is a sample Python script who aim to validate a sudoku grid.
-# This approach consists in doing two validation
-# The first by checking each blocks and the last by checking lines and columns
-# validSolution(board) return only
+# This is a simple Python script who aim to validate a sudoku grid.
+# This approach consists in doing two validations
+# The first by checking each block and the last by checking rows and columns
 
 def validSolution(board):
     if not isinstance(board, list):
@@ -23,7 +22,7 @@ def validBlocks(bord):
     block = []
     positions = []
     while row < 10:
-        # this loop traverse each blocks (3x3) of the board, 3 blocks per loop
+        # this loop traverse each block (3x3) of the board, 3 blocks per loop
         # and test if each block is valid or not
 
         positions = [(x, y) for x in range(minimum, row) for y in range(maximum)]
